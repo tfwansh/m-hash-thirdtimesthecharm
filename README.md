@@ -1,6 +1,3 @@
-
-
-
 # m-hash (Electron Desktop App)
 
 Cross-platform desktop wrapper for the **frontend-mock** web app, built with **Electron + Vite + React**.  
@@ -14,7 +11,7 @@ Runs on **Windows, macOS, and Linux** with system API access for analytics and f
    ```bash
    cd electron
    npm install
-````
+   ```
 
 2. **Run in dev mode (Electron + Vite)**
 
