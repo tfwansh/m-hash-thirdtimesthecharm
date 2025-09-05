@@ -1,0 +1,83 @@
+# -------------------------
+# Node / package artifacts
+# -------------------------
+**/node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Lockfiles - keep if you intentionally use them
+# bun.lockb   <-- keep tracked if you rely on bun; don't ignore
+
+# -------------------------
+# Frontend build outputs
+# -------------------------
+/frontend-mock/dist/
+/frontend-mock/build/
+/frontend-mock/.vite/
+/frontend-mock/.cache/
+/frontend-mock/.turbo/
+/frontend-mock/.parcel-cache/
+
+# -------------------------
+# Electron / packaging outputs
+# -------------------------
+/electron/dist/
+/electron/out/
+/dist/
+/release/
+/build/
+
+# -------------------------
+# Editor / OS
+# -------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.sublime-*
+
+# -------------------------
+# Logs & temp
+# -------------------------
+*.log
+logs/
+*.log.*
+tmp/
+tmp-*/
+
+# -------------------------
+# Env / credentials
+# -------------------------
+.env
+.env.*.local
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+secret-*.json
+
+# -------------------------
+# Test coverage
+# -------------------------
+coverage/
+.nyc_output/
+
+# -------------------------
+# Misc archives / artifacts
+# -------------------------
+*.tgz
+*.zip
+*.tar.gz
+*.7z
+
+# -------------------------
+# OS-specific/other ignores
+# -------------------------
+*.swp
+*.swo
+*.DS_Store
+
