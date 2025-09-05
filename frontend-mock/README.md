@@ -1,4 +1,4 @@
-- git clone https://github.com/tfwansh/swift-focus-aid
-- cd swift-focus-aid
+- git clone https://github.com/tfwansh/m-hash-thirdtimesthecharm
+- cd m-hash-thirdtimesthecharm/frontend-mock
 - npm i
 - npm run dev
