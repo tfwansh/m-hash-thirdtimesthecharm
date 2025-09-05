@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smart Focus Tracker Design System */
+
+@layer base {
+  :root {
+    /* Primary Focus Theme */
+    --background: 250 100% 99%;
+    --foreground: 240 10% 15%;
+
+    /* Focus Brand Colors */
+    --primary: 245 85% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 245 70% 68%;
+    
+    /* Success & Focus States */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 142 60% 50%;
+    
+    /* Warning & Nudge States */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-glow: 38 80% 60%;
+    
+    /* Distraction & Alert States */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-glow: 0 70% 70%;
+
+    /* Interface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 15%;
+    --card-border: 240 15% 92%;
+
+    --secondary: 245 25% 95%;
+    --secondary-foreground: 240 10% 25%;
+
+    --muted: 245 15% 96%;
+    --muted-foreground: 240 5% 45%;
+
+    --accent: 245 100% 96%;
+    --accent-foreground: 245 85% 25%;
+
+    --border: 240 15% 92%;
+    --input: 240 15% 96%;
+    --ring: 245 85% 58%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
+    --gradient-warning: linear-gradient(135deg, hsl(var(--warning)), hsl(var(--warning-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(245 85% 58%), hsl(220 85% 65%), hsl(200 85% 72%));
+    --gradient-focus: linear-gradient(180deg, hsl(245 100% 99%), hsl(245 50% 97%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(var(--primary) / 0.08);
+    --shadow-medium: 0 4px 16px -4px hsl(var(--primary) / 0.12);
+    --shadow-strong: 0 8px 32px -8px hsl(var(--primary) / 0.16);
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.3);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 240 10% 95%;
+
+    --primary: 245 85% 65%;
+    --primary-foreground: 240 10% 4%;
+    --primary-glow: 245 70% 75%;
+
+    --success: 142 76% 45%;
+    --success-glow: 142 60% 55%;
+    
+    --warning: 38 92% 55%;
+    --warning-glow: 38 80% 65%;
+
+    --card: 240 10% 6%;
+    --card-foreground: 240 10% 95%;
+    --card-border: 240 15% 12%;
+
+    --secondary: 240 10% 8%;
+    --secondary-foreground: 240 10% 85%;
+
+    --muted: 240 10% 10%;
+    --muted-foreground: 240 5% 60%;
+
+    --accent: 240 10% 12%;
+    --accent-foreground: 245 85% 70%;
+
+    --border: 240 15% 12%;
+    --input: 240 10% 8%;
+    --ring: 245 85% 65%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(245 85% 65%), hsl(220 85% 70%), hsl(200 85% 75%));
+    --gradient-focus: linear-gradient(180deg, hsl(240 10% 4%), hsl(240 15% 6%));
+
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px -4px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 32px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 20px hsl(var(--primary-glow) / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Focus-specific utility classes */
+  .focus-gradient {
+    background: var(--gradient-primary);
+  }
+
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(12px);
+    background: hsl(var(--background) / 0.8);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+
+  .bounce-transition {
+    transition: var(--transition-bounce);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary) / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
